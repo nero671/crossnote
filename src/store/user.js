@@ -7,13 +7,13 @@ export default {
     user: null
   },
   mutations: {
-    setUser(state, payload) {
+    setUser (state, payload) {
       state.user = payload
     }
   },
   actions: {
     // Registration page
-    async registerUser({
+    async registerUser ({
       commit
     }, {
       email,
@@ -34,7 +34,7 @@ export default {
       }
     },
     // Login page
-    async loginUser({
+    async loginUser ({
       commit
     }, {
       email,
@@ -55,14 +55,14 @@ export default {
       }
     },
     // Logged
-    loggedUser({
+    loggedUser ({
       commit
     }, payload) {
       // Send mutation new uid used helped Class
       commit('setUser', new User(payload.uid))
     },
     // Logout
-    logoutUser({
+    logoutUser ({
       commit
     }) {
       firebase.auth().signOut()
@@ -72,11 +72,11 @@ export default {
   },
   getters: {
     // Return user (for get id)
-    user(state) {
+    user (state) {
       return state.user
     },
     // Check User (for logged)
-    checkUser(state) {
+    checkUser (state) {
       return state.user !== null
     }
   }

@@ -1,6 +1,6 @@
 // Helped class for Task
 export default class Task {
-  constructor(
+  constructor (
     title,
     description,
     completed,

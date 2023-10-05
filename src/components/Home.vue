@@ -5,7 +5,7 @@
         <h1 class="ui-title-1">Your notes</h1>
         <input type="text" placeholder="Title" v-model="taskTitle" @keyup.enter="newTask" />
         <textarea type="text" placeholder="What we will watch?" v-model="taskDescription" @keyup.enter="newTask"></textarea>
-      </div>    
+      </div>
     </section>
   </div>
 </template>
@@ -43,5 +43,5 @@ export default {
 </script>
 
 <style scoped>
-  
+
 </style>

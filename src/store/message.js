@@ -8,7 +8,7 @@ export default {
     }
   },
   mutations: {
-    getMessage(state, {
+    getMessage (state, {
       context,
       title
     }) {
@@ -16,12 +16,12 @@ export default {
       state.message.context = context
       state.message.title = title
     },
-    hideMessage(state) {
+    hideMessage (state) {
       state.message.show = false
     }
   },
   actions: {
-    getMessage({
+    getMessage ({
       commit
     }, {
       context,
@@ -38,7 +38,7 @@ export default {
     }
   },
   getters: {
-    message(state) {
+    message (state) {
       return state.message
     }
   }

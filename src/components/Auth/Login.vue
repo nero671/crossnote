@@ -27,14 +27,14 @@
                 <div class="buttons-list buttons-list--info">
                   <p class="typo__p" v-if="submitStatus === 'OK'">Thanks for your submission!</p>
                   <p class="typo__p" v-if="submitStatus === 'ERROR'">Please fill the form correctly.</p>
-                  <p v-else="">{{ submitStatus }}</p> 
+                  <p v-else="">{{ submitStatus }}</p>
                 </div>
                 <div class="buttons-list buttons-list--info"><span>Need Registration?
                     <router-link to="/login">Enter Here</router-link></span></div>
               </form>
             </div>
         </div>
-      </div>    
+      </div>
     </section>
   </div>
 </template>
@@ -98,7 +98,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .auth 
+  .auth
     height 620px
     width 539px
     border 1px solid #e9e9e9
@@ -107,25 +107,25 @@ export default {
     background-color #fff
     margin 0 auto
     text-align center
-  
-  .auth-banner 
+
+  .auth-banner
     margin-top 30px
-  
-  .auth-sub 
+
+  .auth-sub
     margin-top -5px
     margin-bottom 30px
     font-size 16px
 
-  .form-item 
+  .form-item
     .error
       display none
       margin-bottom 10px
       font-size 13.4px
-      color #fc5c65 
+      color #fc5c65
     &.errorInput
       .error
         display block
-  
+
   input
     width 75%;
     margin 0 auto
@@ -142,7 +142,7 @@ export default {
         margin-bottom 0
   a
     color #444ce0
-  
+
   .button
     width 74%
     background #313131

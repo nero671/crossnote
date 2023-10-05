@@ -31,13 +31,13 @@
                   <span class="ui-title-3">{{ task.title }}</span>
                 </div>
                 <div class="task-item__body">
-                  <p class="ui-text-regular">{{ task.description }}</p>  
+                  <p class="ui-text-regular">{{ task.description }}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>    
+      </div>
     </section>
     <div class="ui-messageBox__wrapper" v-if="editingPopup" @click="cancelTaskEdit" :class="{active: editingPopup}">
       <div class="ui-messageBox fadeInDown" @click.stop="">

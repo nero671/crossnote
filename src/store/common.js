@@ -4,18 +4,19 @@ export default {
     error: null
   },
   mutations: {
-    setLoading(state, payload) {
+    setLoading (state, payload) {
       state.loading = payload
     },
-    setError(state, payload) {
+    setError (state, payload) {
       state.error = payload
     },
-    clearError(state) {
+    clearError (state) {
       state.error = null
     }
   },
   actions: {
     // Show loading
+    /* eslint-disable */
     setLoading({
       commit
     }, payload) {

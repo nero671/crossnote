@@ -7,13 +7,13 @@ export default {
     tasks: []
   },
   mutations: {
-    loadTasks(state, payload) {
+    loadTasks (state, payload) {
       state.tasks = payload
     },
-    newTask(state, payload) {
+    newTask (state, payload) {
       state.tasks.push(payload)
     },
-    editTask(state, {
+    editTask (state, {
       id,
       title,
       description
@@ -24,7 +24,7 @@ export default {
       task.title = title
       task.description = description
     },
-    completedTask(state, {
+    completedTask (state, {
       id,
       completed
     }) {
@@ -36,7 +36,7 @@ export default {
   },
   actions: {
     // Load all Tasks
-    async loadTasks({
+    async loadTasks ({
       commit
     }) {
       commit('clearError')
@@ -76,7 +76,7 @@ export default {
       }
     },
     // Create new Task
-    async newTask({
+    async newTask ({
       commit,
       getters
     }, payload) {
@@ -108,7 +108,7 @@ export default {
       }
     },
     // Edit Task (popup)
-    async editTask({
+    async editTask ({
       commit
     }, {
       id,
@@ -138,7 +138,7 @@ export default {
       }
     },
     // Change Completed
-    async completedTask({
+    async completedTask ({
       commit
     }, {
       id,
@@ -165,7 +165,7 @@ export default {
       }
     },
     // Delete Task (button)
-    async deleteTask({
+    async deleteTask ({
       commit
     }, id) {
       commit('clearError')
@@ -183,19 +183,19 @@ export default {
   },
   getters: {
     // Get All user Tasks
-    tasks(state, getters) {
+    tasks (state, getters) {
       return state.tasks.filter(task => {
         return task.user === getters.user.id
       })
     },
     // Get user Completed Tasks
-    taskCompleted(state, getters) {
+    taskCompleted (state, getters) {
       return getters.tasks.filter(task => {
         return task.completed
       })
     },
     // Get user Active Tasks
-    taskNotCompleted(state, getters) {
+    taskNotCompleted (state, getters) {
       return getters.tasks.filter(task => {
         return task.completed === false
       })

@@ -1,6 +1,6 @@
 // Helped class for User
 export default class User {
-  constructor(id) {
+  constructor (id) {
     this.id = id
   }
 }
